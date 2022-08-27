@@ -1,0 +1,20 @@
+.card{
+    display: flex;
+    gap:20px;
+
+    .image{
+        min-width:300px;
+        aspect-ratio: 16/9;
+        background:grey;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        justify-content: space-between;
+
+        .title{
+            margin-bottom:10px;
+        }
+    }
+}

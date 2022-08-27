@@ -1,0 +1,15 @@
+.card{
+    width:50%;
+
+    .image{
+        width:100%;
+        aspect-ratio: 16/9;
+        background:grey;
+    }
+    .text{
+        width:400px;
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+    }
+}

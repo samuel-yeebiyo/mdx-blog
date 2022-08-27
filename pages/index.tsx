@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
-import { NavBar } from '../components/NavBar/NavBar'
+import { MostRecentArticles } from '../components/MostRecentArticles/MostRecentArticles'
+import { MoreArticles } from '../components/MoreArticles/MoreArticles'
+import { Categories } from '../components/Categories/Categories'
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +14,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-
-      </main>
+      <div className={styles.main}>
+        <MostRecentArticles/>
+        <div className={styles.more_content}>
+          <MoreArticles/>
+          <Categories/>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,19 @@
+.container{
+    margin-bottom:50px;
+
+    .layout{
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+        gap:30px;
+
+        .side{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+    }
+
+
+
+}
