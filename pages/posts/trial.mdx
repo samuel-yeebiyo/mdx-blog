@@ -1,0 +1,23 @@
+import {Posts} from '../../templates/Default/Post'
+
+
+export const meta = {
+    author: "Samuel Yemane"
+}
+export const toc = [
+    "Introduction",
+    "Creating this blog",
+    "Introducing components"
+]
+
+## This is the title
+
+export default ({children}) => <Posts meta={meta} toc={toc}>{children}</Posts>
+
+export async function getServerSideProps() {
+
+    console.log("Sdsd")
+    return {
+        props: {}, // will be passed to the page component as props
+    }
+}
