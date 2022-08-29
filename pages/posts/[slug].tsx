@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import {getArticleFromSlug, getSlugs} from '../../lib/mdx'
 import { MDXRemote } from 'next-mdx-remote'
 import {components} from '../../ui/mdxComponents'
+import styles from 'styles/post.module.scss'
 
 interface Props{
     source?:any,
@@ -9,10 +10,12 @@ interface Props{
 }
 
 const Posts = ({source,frontMatter}:Props) => {
+
+    //add the head component for the SEO using
+
     return(
-        <div>
-            <p>{frontMatter.title}</p>
-            <MDXRemote {...source} components={components}/>
+        <div className={styles.wrapper}>
+            <MDXRemote {...source} components={components} frontmatter={frontMatter}/>
         </div>
     )
 }

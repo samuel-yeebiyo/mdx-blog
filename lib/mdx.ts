@@ -24,14 +24,17 @@ export async function getArticleFromSlug(slug:string) {
   const articleDir = path.join(articlesPath, `${slug}.mdx`)
   const source = fs.readFileSync(articleDir)
   const { content, data } = matter(source)
-  const mdxSource = await serialize(content, { parseFrontmatter: true })
+  const frontMatter = {
+    readingTime: readingTime(content).text,
+    ...data,
+  }
+  console.log(frontMatter)
+  
+  const mdxSource = await serialize(content, { parseFrontmatter: true, scope:frontMatter })
 
   return {
       source:mdxSource,
-      frontMatter: {
-          readingTime: readingTime(content).text,
-          ...data,
-      },
+      frontMatter 
   }
 
 }

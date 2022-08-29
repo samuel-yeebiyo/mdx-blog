@@ -1,5 +1,5 @@
-import { Post } from "./layouts/Posts";
+import { Default } from "./layouts/Default";
 
 export const components = {
-    Post
+    Default
 }
