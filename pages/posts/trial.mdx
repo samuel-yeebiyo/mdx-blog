@@ -1,9 +1,16 @@
-import {Posts} from '../../templates/Default/Post'
+---
+title:'Hello World',
+slug:'hello-world'
+---
+
+import {serialize } from 'next-mdx-remote/serialize'
+import {Posts} from '../../templates/Default/Posts'
 
 
 export const meta = {
     author: "Samuel Yemane"
 }
+
 export const toc = [
     "Introduction",
     "Creating this blog",
@@ -13,11 +20,3 @@ export const toc = [
 ## This is the title
 
 export default ({children}) => <Posts meta={meta} toc={toc}>{children}</Posts>
-
-export async function getServerSideProps() {
-
-    console.log("Sdsd")
-    return {
-        props: {}, // will be passed to the page component as props
-    }
-}

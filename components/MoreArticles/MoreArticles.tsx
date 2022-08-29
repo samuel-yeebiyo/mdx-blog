@@ -1,11 +1,11 @@
 import styles from './morearticles.module.scss'
-import { SmallCard } from '../Cards/SamllCard/SmallCard'
+import { SmallCard } from '@/components/Cards'
 
-export const MoreArticles = () => {
+export const MoreArticles = ({more}:any) => {
 
     return(
         <div className={styles.container}>
-            <p>More Articles</p>
+            <h1>More Articles</h1>
             <div className={styles.layout}>
                 <SmallCard/>
                 <SmallCard/>

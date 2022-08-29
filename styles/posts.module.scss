@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+    .content{
+        flex:1;
+        
+        h1{
+            margin-bottom:30px;
+        }
+        .cards{
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+
+            *{
+            }
+        }
+        
+    }
+    .categories{
+        
+        width:30%;
+        height:300px;
+        border:1px solid red;
+        position:sticky;
+        top:0;
+           
+    }
+}

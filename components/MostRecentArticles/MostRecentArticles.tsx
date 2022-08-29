@@ -1,15 +1,18 @@
 import styles from './mostrecent.module.scss'
-import { LargeCard } from "../Cards/LargeCard/LargeCard"
-import { SmallCard } from '../Cards/SamllCard/SmallCard'
+import { LargeCard } from "@/components/Cards"
 
-export const MostRecentArticles = () => { 
+export const MostRecentArticles = ({articles}:any) => { 
+
+    console.log({articles})
 
     return (
         <div className={styles.container}>
-            <p>Most Recent Posts</p>
+            <h1>Most Recent Posts</h1>
             <div className={styles.layout}>
-                <LargeCard/>
-                <LargeCard/>
+                {!!articles && articles.map((article:any)=>{
+                    return <LargeCard article={article}/>
+
+                })}
             </div>
         </div>
     )

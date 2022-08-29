@@ -1,14 +1,12 @@
+---
+title: 'Title'
+description: "This is the description."
+---
 
-export const meta = {
-    author: "Samuel Yemane"
-}
-export const toc = [
-    "Introduction",
-    "Creating this blog",
-    "Introducing components"
-]
+import {Posts} from 'templates/Default/Posts'
 
-## This is the title
+<Post>
+    ## This is the title
+</Post>
 
-export default ({children}) => <Posts meta={meta} toc={toc}>{children}</Posts>
 

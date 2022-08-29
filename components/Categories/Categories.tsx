@@ -4,8 +4,13 @@ export const Categories = () => {
 
     return(
         <div className={styles.container}>
-            <p>Categories</p>
+            <h1>Categories</h1>
             <div className={styles.layout}>
+                <div className={styles.categories_container}>
+                    {[0,0,0,0,].map(()=>(
+                        <p className={styles.category}>Category</p>
+                    ))}
+                </div>
             </div>
         </div>
     )
