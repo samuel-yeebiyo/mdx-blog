@@ -1,7 +1,5 @@
 import { NextPage } from "next";
-import {serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
-import {useEffect, useState} from 'react'
+import Image from "next/image";
 import styles from './default.module.scss'
 
 interface Props{
@@ -11,13 +9,22 @@ interface Props{
     data:any
 }
 
-export const Default : NextPage<Props> = ({children, data, title,description }) => {
+export const Default : NextPage<Props> = ({children, data}) => {
 
-    console.log({data, title, description})
+    console.log({data})
 
     return(
         <div className={styles.default}>
-           {children}
+            <div className={styles.image}>
+                <img src={data.image}/>
+            </div>
+            <div className={styles.meta}>
+                <span>{data.readingTime} - </span><span>0 Views</span>
+            </div>
+            <div className={styles.content}>
+                <h1>{data.title}</h1>
+                {children}
+            </div>
         </div>
     )
 }

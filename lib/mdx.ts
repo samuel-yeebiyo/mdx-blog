@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import readingTime from 'reading-time'
 import { sync } from 'glob'
 import { serialize } from 'next-mdx-remote/serialize'
+import rehypePrettyCode from 'rehype-pretty-code'
 
 const articlesPath = path.join(process.cwd(), 'content')
 
@@ -25,16 +26,25 @@ export async function getArticleFromSlug(slug:string) {
   const source = fs.readFileSync(articleDir)
   const { content, data } = matter(source)
   const frontMatter = {
-    readingTime: readingTime(content).text,
-    ...data,
+    data:{
+      readingTime: readingTime(content).text,
+      ...data,
+    }
   }
   console.log(frontMatter)
   
-  const mdxSource = await serialize(content, { parseFrontmatter: true, scope:frontMatter })
+  const options = {
+    theme:"one-dark-pro",
+    onVisitHighlightedLine(node:any) {
+      node.properties.className.push("line--highlighted")
+    },
+  }
+  
+  const mdxSource = await serialize(content, { parseFrontmatter: true, scope:frontMatter, mdxOptions:{rehypePlugins: [[rehypePrettyCode,options]]}})
 
   return {
       source:mdxSource,
-      frontMatter 
+      frontMatter:frontMatter.data 
   }
 
 }
