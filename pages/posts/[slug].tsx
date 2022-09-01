@@ -37,6 +37,7 @@ export async function getStaticPaths(){
 export async function getStaticProps({params}:any) {
     // MDX text - can be from a local file, database, anywhere
    const {source, frontMatter} = await getArticleFromSlug(params.slug)
+   console.log({source})
 
     return { 
         props: { 

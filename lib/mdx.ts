@@ -30,9 +30,7 @@ export async function getArticleFromSlug(slug:string) {
       readingTime: readingTime(content).text,
       ...data,
     }
-  }
-  console.log(frontMatter)
-  
+  }  
   const options = {
     theme:"one-dark-pro",
     onVisitHighlightedLine(node:any) {
@@ -40,8 +38,17 @@ export async function getArticleFromSlug(slug:string) {
     },
   }
   
-  const mdxSource = await serialize(content, { parseFrontmatter: true, scope:frontMatter, mdxOptions:{rehypePlugins: [[rehypePrettyCode,options]]}})
-
+  
+  const mdxSource = await serialize(content, {
+    parseFrontmatter: true, 
+    scope:frontMatter, 
+    mdxOptions:{
+      rehypePlugins: [
+        [rehypePrettyCode,options]
+      ]
+    }
+  })
+  
   return {
       source:mdxSource,
       frontMatter:frontMatter.data 
