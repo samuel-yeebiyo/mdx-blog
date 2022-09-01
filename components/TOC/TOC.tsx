@@ -14,8 +14,7 @@ export const TOC = ({source}:any) => {
     }
 
     const headings = getTOC(source)
-    console.log({headings})
-
+    
     return(
         <div className={styles.toc}>
             <h2>Table of Content</h2>

@@ -3,8 +3,6 @@ import { LargeCard } from "@/components/Cards"
 
 export const MostRecentArticles = ({articles}:any) => { 
 
-    console.log({articles})
-
     return (
         <div className={styles.container}>
             <h1>Most Recent Posts</h1>

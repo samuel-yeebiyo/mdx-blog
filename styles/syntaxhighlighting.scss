@@ -42,12 +42,14 @@ div[data-rehype-pretty-code-fragment] {
     }
        
     .line--highlighted {
+        border-left:2px solid;
         border-left-color: rgb(253 164 175 / 0.7);
         background-color: rgb(254 205 211 / 0.1);
     }
 
     code {
         display: grid;
+        gap:5px;
     }
 
     code[data-line-numbers] {

@@ -3,8 +3,6 @@ import Link from 'next/link'
 
 export const LargeCard = ({article}:any) => {
 
-    console.log(article)
-
     return (
         <div className={styles.card}>
             <Link href={`/posts/${article.slug}`}>
