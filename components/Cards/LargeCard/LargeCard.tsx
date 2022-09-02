@@ -11,12 +11,13 @@ export const LargeCard = ({article}:any) => {
                         <img src={article?.image}/>
                     </div>
                     <div className={styles.text}>
-                        <p className={styles.title}>{article?.title}</p>
+                        <h2 className={styles.title}>{article?.title}</h2>
+                        <p className={styles.meta}>{article.readingTime}</p>
                         <p className={styles.description}>
                             {article?.description}
                         </p>
                     </div>
-                    <p>Read more ---</p>
+                    <p className={styles.more}>Read more ---</p>
                 </a>
             </Link>
         </div>

@@ -5,12 +5,14 @@
         border-radius: 10px;
         overflow: hidden;
         margin-bottom:20px;
-        // height:500px;
         width:100%;
 
         img{
             width:100%;
         }
+    }
+    .meta{
+        margin-bottom:5px;
     }
     .content_wrapper{
         display: flex;

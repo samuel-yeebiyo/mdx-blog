@@ -1,13 +1,17 @@
 .toc{
     width:100%;
     position:sticky;
-    top:calc(8vh + 30px);
+    top:calc(100px + 30px);
 
     h2{
         margin-bottom:20px;
+        color:var(--accent)
     }
 
     p{
         margin-bottom:10px;
+        :hover{
+            color:var(--accent)
+        }
     }
 }
