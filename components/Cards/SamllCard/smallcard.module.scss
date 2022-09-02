@@ -4,9 +4,16 @@
 
     .image{
         min-width:300px;
+        width:300px;
         aspect-ratio: 16/9;
         background:grey;
         border-radius:10px;
+        overflow:hidden;
+
+        img{
+            max-width: 100%;
+            min-height:100%;
+        }
     }
     .text{
         display: flex;
@@ -16,6 +23,8 @@
 
         .title{
             margin-bottom:10px;
+            font-weight: bold;
+            font-size:20px;
         }
     }
 }

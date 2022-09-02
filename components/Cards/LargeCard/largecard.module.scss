@@ -5,8 +5,14 @@
         width:100%;
         aspect-ratio: 16/9;
         background:grey;
-        margin-bottom:10px;
+        margin-bottom:20px;
         border-radius:10px;
+        overflow:hidden;
+
+        img{
+            max-width: 100%;
+            min-height:100%;
+        }
     }
     .text{
         width:100%;
@@ -14,5 +20,10 @@
         flex-direction: column;
         gap:10px;
         margin-bottom:10px;
+
+        .title{
+            font-weight: bold;
+            font-size:20px;
+        }
     }
 }

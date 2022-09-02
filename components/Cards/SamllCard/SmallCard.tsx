@@ -1,21 +1,25 @@
 import styles from './smallcard.module.scss'
+import Link from 'next/link'
 
-export const SmallCard = () => {
+export const SmallCard = ({article}:any) => {
     return (
-        <div className={styles.card}>
-            <div className={styles.image}>
-
-            </div>
-            <div className={styles.text}>
-                <div>
-                    <p className={styles.title}>The Title Of The Post</p>
-                    <p className={styles.description}>
-                        This is the description section of the card. This will be a short note about what the article will be about. This is the description section of the card. This will be a short note about what the article will be about.
-                        This is the description section of the card. This will be a short note about what the article will be about.
-                    </p>
-                </div>
-                <p>Read more ---</p>
-            </div>
+        <div>
+            <Link href={`/posts/${article.slug}`}>
+                <a className={styles.card}>
+                    <div className={styles.image}>
+                        <img src={article?.image}/>
+                    </div>
+                    <div className={styles.text}>
+                        <div>
+                            <p className={styles.title}>{article?.title}</p>
+                            <p className={styles.description}>
+                                {article?.description}
+                            </p>
+                        </div>
+                        <p>Read more ---</p>
+                    </div>
+                </a>
+            </Link>
         </div>
     )
 }

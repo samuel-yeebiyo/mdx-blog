@@ -77,3 +77,27 @@ export async function getAllArticles() {
       ]
     }, [])
 }
+
+export async function getCategories() {
+  const articles = fs.readdirSync(path.join(process.cwd(), 'content'))
+
+  return articles.reduce((allCategories:any[], articleSlug:any) => {
+    // get parsed data from mdx files in the "articles" dir
+    const source = fs.readFileSync(
+      path.join(process.cwd(), 'content', articleSlug),
+      'utf-8'
+    )
+    const { data } = matter(source)
+
+    const categories = data.categories?.filter((item:any)=>{
+      if(!allCategories.includes(item)){
+        return item
+      }
+    })
+
+    return [
+      ...categories,
+      ...allCategories
+    ]
+  }, [])
+}

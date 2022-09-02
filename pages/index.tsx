@@ -4,10 +4,14 @@ import styles from '../styles/Home.module.scss'
 import { MostRecentArticles } from '../components/MostRecentArticles/MostRecentArticles'
 import { MoreArticles } from '../components/MoreArticles/MoreArticles'
 import { Categories } from '../components/Categories/Categories'
-import { getAllArticles } from '@/lib/mdx'
+import { getAllArticles, getCategories } from '@/lib/mdx'
 import { useState } from 'react'
 
-const Home: NextPage = ({articles, mostRecent, more}:any) => {
+const Home: NextPage = ({articles, mostRecent, categories}:any) => {
+
+  const [filteredArticles, setFilteredArticles] = useState(articles)
+  const [current, setCurrent] = useState("")
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,8 +23,8 @@ const Home: NextPage = ({articles, mostRecent, more}:any) => {
       <div className={styles.main}>
         <MostRecentArticles articles={mostRecent}/>
         <div className={styles.more_content}>
-          <MoreArticles more={articles}/>
-          <Categories/>
+          <MoreArticles articles={articles}/>
+          {/* <Categories categories={categories}/> */}
         </div>
       </div>
     </div>
@@ -38,11 +42,14 @@ export async function getStaticProps (){
       return article
     }
   })
+  const allCategories = await getCategories()
+
   
   return{
     props:{
       articles:allArticles,
       mostRecent,
+      categories:allCategories
       // more
 
     }

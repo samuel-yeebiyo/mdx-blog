@@ -1,5 +1,5 @@
 .container{
-    width:auto;
+    width:90%;
 
     h1{
         margin-bottom:30px;
@@ -10,5 +10,11 @@
         display: flex;
         flex-direction: column;
         gap:30px;
+        margin-bottom:50px;
+    }
+    .more{
+        background:white;
+        color:black;
+        padding:10px;
     }
 }

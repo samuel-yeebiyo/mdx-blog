@@ -1,6 +1,8 @@
 .container{
     display: flex;
     justify-content: space-between;
+    width:100%;
+    gap:70px;
     
     .content{
         flex:1;
@@ -12,14 +14,10 @@
             display: flex;
             flex-direction: column;
             gap:40px;
-
-            *{
-            }
         }
         
     }
     .categories{
-        
         width:30%;
         height:300px;
         border:1px solid red;
