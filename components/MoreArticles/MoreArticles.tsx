@@ -15,9 +15,6 @@ export const MoreArticles = ({articles}:any) => {
                     return <SmallCard article={article}/>
                 })}
             </div>
-            <Link href="/posts/" scroll={true}>
-                <a className={styles.more}>More Posts</a>
-            </Link>
         </div>
     )
 

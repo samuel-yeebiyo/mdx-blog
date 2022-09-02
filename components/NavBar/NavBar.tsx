@@ -11,10 +11,7 @@ export const NavBar = () =>{
                 <div className={styles.items}>
                     <Link href="/posts">
                         <a>Posts</a>
-                    </Link>
-                    <Link href="/">
-                        <a>Categories</a>
-                    </Link>               
+                    </Link>              
                     <a 
                         href="https://samuel-yeebiyo.tk"
                         target='_blank'
