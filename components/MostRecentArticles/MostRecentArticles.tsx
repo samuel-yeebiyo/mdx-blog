@@ -9,7 +9,6 @@ export const MostRecentArticles = ({articles}:any) => {
             <div className={styles.layout}>
                 {!!articles && articles.map((article:any)=>{
                     return <LargeCard article={article}/>
-
                 })}
             </div>
         </div>

@@ -31,8 +31,12 @@
                 margin-bottom:20px;
                 line-height: 1.7em;
             }
+
+            @media(max-width:900px){
+                max-width:100%;
+            }
         }
     }
-
+    
     
 }

@@ -14,4 +14,8 @@
             color:var(--accent)
         }
     }
+
+    @media(max-width:900px){
+        display: none;
+    }
 }

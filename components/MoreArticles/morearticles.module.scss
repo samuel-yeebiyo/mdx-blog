@@ -17,4 +17,9 @@
         color:black;
         padding:10px;
     }
+
+    @media (max-width:650px){
+        border:1px solid green;
+        width:100%;
+    }
 }

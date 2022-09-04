@@ -13,7 +13,8 @@
         .image{
             min-width:300px;
             width:300px;
-            aspect-ratio: 16/9;
+            max-height:calc((300px*9px)/16px);
+            height:calc((300*9)/16);
             background:grey;
             border-radius:10px;
             overflow:hidden;
@@ -36,6 +37,15 @@
             .meta{
                 margin-bottom:10px;
                 font-size:0.9em;
+            }
+        }
+
+        @media (max-width:640px){
+            flex-direction: column;
+            border:1px solid red;
+
+            .image{
+                width:100%;
             }
         }
     }
