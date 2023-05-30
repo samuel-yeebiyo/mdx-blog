@@ -31,14 +31,14 @@ const Posts: NextPage = ({ articles, categories }: any) => {
         <div className={styles.content}>
           <h1>All Posts</h1>
           <div className={styles.cards}>
-            {filteredArticles.map((article: any) => (
-              <SmallCard article={article} />
+            {filteredArticles.map((article: any, idx: number) => (
+              <SmallCard key={idx} article={article} />
             ))}
-            {filteredArticles.map((article: any) => (
-              <SmallCard article={article} />
+            {filteredArticles.map((article: any, idx: number) => (
+              <SmallCard key={idx} article={article} />
             ))}
-            {filteredArticles.map((article: any) => (
-              <SmallCard article={article} />
+            {filteredArticles.map((article: any, idx: number) => (
+              <SmallCard key={idx} article={article} />
             ))}
           </div>
         </div>

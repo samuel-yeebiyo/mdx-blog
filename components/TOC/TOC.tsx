@@ -17,8 +17,8 @@ export const TOC = ({ source }: any) => {
   return (
     <div className={styles.toc}>
       <h2>Table of Content</h2>
-      {headings.map((item) => (
-        <p>
+      {headings.map((item, idx) => (
+        <p key={idx}>
           <a href={`#${item.tag}`}>{item.name}</a>
         </p>
       ))}

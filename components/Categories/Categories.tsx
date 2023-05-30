@@ -7,8 +7,9 @@ export const Categories = ({ categories, setFilter, current }: any) => {
       <h1>Categories</h1>
       <div className={styles.layout}>
         <div className={styles.categories_container}>
-          {categories?.map((item: any) => (
+          {categories?.map((item: any, idx: number) => (
             <p
+              key={idx}
               className={
                 current == item
                   ? [styles.current, styles.category].join(" ")

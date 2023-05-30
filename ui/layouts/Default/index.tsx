@@ -14,7 +14,13 @@ export const Default: NextPage<Props> = ({ children, data }) => {
   return (
     <div className={styles.default}>
       <div className={styles.image}>
-        <img src={data.image} />
+        <Image
+          alt="layout-image"
+          width={1000}
+          height={1000}
+          src={data.image}
+          className="w-full h-full top-0 left-0 object-cover"
+        />
       </div>
       <div className={styles.meta}>
         <span>{data.readingTime} - </span>

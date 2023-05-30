@@ -12,14 +12,14 @@ const Home: NextPage = ({ articles, mostRecent, categories }: any) => {
   const [current, setCurrent] = useState("");
 
   return (
-    <div className={styles.container}>
+    <div className="w-full">
       <Head>
         <title>Blog | Samuel Yeebiyo</title>
         <meta name="description" content="Check out my blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.main}>
+      <div className="w-full">
         <MostRecentArticles articles={mostRecent} />
         <div className={styles.more_content}>
           <MoreArticles articles={articles} />
