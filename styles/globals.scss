@@ -1,22 +1,22 @@
-@import './syntaxhighlighting.scss';
-@import './nprogrss.scss';
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+@import "./syntaxhighlighting.scss";
+@import "./nprogrss.scss";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap");
 
-:root{
-  --accent:#f03a47;
-  --primary:#1e1e24;
+:root {
+  --accent: #f03a47;
+  --primary: #1e1e24;
 }
 
 html,
 body {
-  font-family:'Dosis', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    position: relative;
-    scroll-behavior: smooth;
-    scroll-padding: calc(80px + 15px);
-    // letter-spacing: 0.1ch;
-    // font-weight: 300;
+  font-family: "Dosis", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-padding: calc(80px + 15px);
+  // letter-spacing: 0.1ch;
+  // font-weight: 300;
 }
 
 a {
@@ -29,8 +29,8 @@ a {
   padding: 0;
   margin: 0;
 }
-h1{
-  color:var(--accent)
+h1 {
+  color: var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,9 +44,7 @@ h1{
 }
 
 @mixin tablet-up {
-
   @media (max-width: 768px) {
-     @content
+    @content;
   }
-  
 }

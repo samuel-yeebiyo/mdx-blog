@@ -1,21 +1,21 @@
-.toc{
-    width:100%;
-    position:sticky;
-    top:calc(100px + 30px);
+.toc {
+  width: 100%;
+  position: sticky;
+  top: calc(100px + 30px);
 
-    h2{
-        margin-bottom:20px;
-        color:var(--accent)
-    }
+  h2 {
+    margin-bottom: 20px;
+    color: var(--accent);
+  }
 
-    p{
-        margin-bottom:10px;
-        :hover{
-            color:var(--accent)
-        }
+  p {
+    margin-bottom: 10px;
+    :hover {
+      color: var(--accent);
     }
+  }
 
-    @media(max-width:900px){
-        display: none;
-    }
+  @media (max-width: 900px) {
+    display: none;
+  }
 }

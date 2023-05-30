@@ -1,2 +1,2 @@
-export { LargeCard } from './LargeCard/LargeCard'
-export { SmallCard } from './SamllCard/SmallCard'
+export { LargeCard } from "./LargeCard/LargeCard";
+export { SmallCard } from "./SamllCard/SmallCard";
