@@ -13,22 +13,22 @@ interface Props {
 export const Default: NextPage<Props> = ({ children, data }) => {
   return (
     <div className={styles.default}>
-      <div className={styles.image}>
+      <div className="rounded-xl overflow-hidden mt-5 w-full mb-4">
         <Image
           alt="layout-image"
           width={1000}
           height={1000}
           src={data.image}
-          className="w-full h-full top-0 left-0 object-cover"
+          className="w-full top-0 left-0 object-cover"
         />
       </div>
-      <div className={styles.meta}>
+      <div className="mb-1 text-xs">
         <span>{data.readingTime} - </span>
         <span>0 Views</span>
       </div>
-      <div className={styles.content_wrapper}>
-        <div className={styles.content}>
-          <h1>{data.title}</h1>
+      <div className="flex justify-between">
+        <div className={styles.content + " max-w-full md:max-w-[70%]"}>
+          <h1 className="font-bold mb-5">{data.title}</h1>
           {children}
         </div>
         <div className={styles.toc}>

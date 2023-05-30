@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
 import { MostRecentArticles } from "../components/MostRecentArticles/MostRecentArticles";
 import { MoreArticles } from "../components/MoreArticles/MoreArticles";
 import { Categories } from "../components/Categories/Categories";
@@ -21,7 +20,7 @@ const Home: NextPage = ({ articles, mostRecent, categories }: any) => {
 
       <div className="w-full">
         <MostRecentArticles articles={mostRecent} />
-        <div className={styles.more_content}>
+        <div className="w-full flex justify-between gap-16">
           <MoreArticles articles={articles} />
           {/* <Categories categories={categories}/> */}
         </div>

@@ -6,7 +6,7 @@ export const components = {
     const idText = props?.children?.replace(/ /g, "-").toLowerCase();
     return (
       <div className="heading_wrapper" key={idText}>
-        <h2 className="heading text-2xl lowercase" id={idText} {...props}>
+        <h2 className="heading text-2xl" id={idText} {...props}>
           {props.children}
         </h2>
       </div>

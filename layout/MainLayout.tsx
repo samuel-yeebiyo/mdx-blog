@@ -5,7 +5,9 @@ export const MainLayout = ({ children }: any) => {
   return (
     <main className="min-h-[100vh] flex flex-col">
       <NavBar />
-      <div className="px-3 mb-8 md:p-6 m-auto max-w-[1100px]">{children}</div>
+      <div className="px-3 mb-8 md:p-6 m-auto max-w-[1100px] w-full">
+        {children}
+      </div>
       <Footer />
     </main>
   );

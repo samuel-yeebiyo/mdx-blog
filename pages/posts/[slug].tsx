@@ -1,8 +1,6 @@
-import { NextPage } from "next";
 import { getArticleFromSlug, getSlugs } from "../../lib/mdx";
 import { MDXRemote } from "next-mdx-remote";
 import { components } from "../../ui/mdxComponents";
-import styles from "styles/post.module.scss";
 import Head from "next/head";
 
 interface Props {
@@ -26,7 +24,7 @@ const Posts = ({ source, frontMatter }: Props) => {
         <meta property="og:url" content="https://samuelyeebiyo/slug" />
         <meta name="twitter:card" content="summary" />
       </Head>
-      <div className={styles.wrapper}>
+      <div className="w-full">
         <MDXRemote
           {...source}
           components={components}
